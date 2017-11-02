@@ -58,14 +58,14 @@ while True:
     cad_price_after_fee = float(json_price_cad) * float(fee)
 
     # print quote
-    print('\n::::::::::::::: YOUR QUOTE ::::::::::::::::\n')
+    print('\n::::::::::::::: YOUR QUOTE :::::::::::::::::\n')
     price_currency = 'Price per ' + currency + ' (in CAD) = ${:0.2f}'. format(cad_price_after_fee)
     print(price_currency)
     total_currency = float(amount) / float(cad_price_after_fee)
     you_receive = 'You receive {:0.5f} '.format(
         total_currency) + currency + ' for ${}'.format(amount)
     print(you_receive)
-    print('\n::::::::::::::: YOUR QUOTE ::::::::::::::::\n')
+    print('\n::::::::::::::: YOUR QUOTE :::::::::::::::::\n')
 
     print('Save transaction details to database? y/n')
     save_to_db = input()
